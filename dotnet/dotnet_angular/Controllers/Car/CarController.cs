@@ -1,3 +1,4 @@
+using dotnet_angular.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dotnet_angular.Controllers.Car;
@@ -6,12 +7,16 @@ namespace dotnet_angular.Controllers.Car;
 [Route("[controller]")]
 public class CarController : ControllerBase
 {
+	private CarService _carService;
 	public CarController()
-	{ }
+	{
+		_carService = new CarService();
+	}
 
 	[HttpGet]
 	public IActionResult Get()
 	{
-		return Ok(true);
+		System.Console.WriteLine("caius");
+		return Ok(_carService.GetCars());
 	}
 }
