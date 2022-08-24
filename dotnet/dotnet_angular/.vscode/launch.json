@@ -1,10 +1,41 @@
 {
 	"version": "0.2.0",
+	"compounds": [
+		{
+			"name": "Compound",
+			"configurations": [
+				"Run npm start",
+				".NET Core Launch (web)"
+			]
+		}
+	],
 	"configurations": [
+		{
+			"name": ".NET Core Attach",
+			"type": "coreclr",
+			"request": "attach",
+			"preLaunchTask": "watch"
+		},
+		{
+			"name": "Launch Chrome",
+			"request": "launch",
+			"type": "chrome",
+			"url": "https://localhost:44437",
+			"webRoot": "${workspaceFolder}"
+		},
+		{
+			"command": "npm start",
+			"name": "Run npm start",
+			"request": "launch",
+			"type": "node-terminal",
+			"cwd": "${workspaceFolder}/ClientApp",
+			"localRoot": "${workspaceFolder}/ClientApp"
+		},
 		{
 			// Use IntelliSense to find out which attributes exist for C# debugging
 			// Use hover for the description of the existing attributes
 			// For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+			"console": "externalTerminal",
 			"name": ".NET Core Launch (web)",
 			"type": "coreclr",
 			"request": "launch",
@@ -15,15 +46,12 @@
 			"cwd": "${workspaceFolder}",
 			"stopAtEntry": false,
 			// Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
-			"serverReadyAction": {
-				"action": "openExternally",
-				"pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+			"launchBrowser": {
+				"enabled": false
 			},
 			"env": {
-				"ASPNETCORE_ENVIRONMENT": "Development"
-			},
-			"sourceFileMap": {
-				"/Views": "${workspaceFolder}/Views"
+				"ASPNETCORE_ENVIRONMENT": "Development",
+				"ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.SpaProxy"
 			}
 		},
 		{

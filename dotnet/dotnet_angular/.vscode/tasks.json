@@ -32,10 +32,49 @@
 			"args": [
 				"watch",
 				"run",
-				"--project",
-				"${workspaceFolder}/dotnet_angular.csproj"
+				"${workspaceFolder}/dotnet_angular.csproj",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
 			],
 			"problemMatcher": "$msCompile"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"isBackground": true,
+			"presentation": {
+				"focus": true,
+				"panel": "dedicated"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": {
+				"owner": "typescript",
+				"source": "ts",
+				"applyTo": "closedDocuments",
+				"fileLocation": [
+					"relative",
+					"${cwd}"
+				],
+				"pattern": "$tsc",
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": {
+						"regexp": "(.*?)"
+					},
+					"endsPattern": {
+						"regexp": "Compiled |Failed to compile."
+					}
+				}
+			}
+		},
+		{
+			"label": "my npm start",
+			"type": "npm",
+			"script": "start",			
+			"options": {"cwd": "./ClientApp"}
 		}
 	]
 }
