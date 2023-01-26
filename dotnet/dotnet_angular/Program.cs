@@ -17,15 +17,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles(new StaticFileOptions
-{
-	FileProvider = new PhysicalFileProvider(
-		Path.Combine(
-			Directory.GetCurrentDirectory(),
-			"ClientApp",
-			"dist")),
-	RequestPath = ""
-});
+app.UseStaticFiles();
 
 app.UseRouting();
 
