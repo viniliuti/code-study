@@ -1,0 +1,13 @@
+{
+	"semi": true,
+	"singleQuote": true,
+	"tabWidth": 4,
+	"trailingComma": "es5",
+	"useTabs": true,
+	"overrides": [
+		{
+			"files": [".html", ".ts"],
+			"options": { "parser": "angular" }
+		}
+	]
+}
