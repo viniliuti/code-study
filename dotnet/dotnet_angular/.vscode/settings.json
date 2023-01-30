@@ -1,0 +1,12 @@
+{
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "eslint.workingDirectories": [
+        {
+            "directory": "/ClientApp"
+        }
+    ],
+    "[*]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
