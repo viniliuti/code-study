@@ -6,13 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // Material imports
-import { ToolbarComponent } from './toolbar/toolbar.component'; // https://material.angular.io/components/toolbar/api
-
-import { CarComponent } from './car/car.component';
 import { CustomMaterialModule } from './custom-material/custom-material.module';
 
+// Project components
+import { CarComponent } from './car/car.component';
+
 @NgModule({
-  declarations: [AppComponent, ToolbarComponent, CarComponent],
+  declarations: [AppComponent, CarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,6 +20,6 @@ import { CustomMaterialModule } from './custom-material/custom-material.module';
     CustomMaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent, ToolbarComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
