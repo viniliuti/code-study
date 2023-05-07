@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // Material imports
-import { CustomMaterialModule } from './custom-material/custom-material.module';
+import { CustomMaterialModule } from './custom-material.module';
 
 // Project components
 import { CarComponent } from './car/car.component';
