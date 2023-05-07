@@ -8,8 +8,8 @@ import { AppComponent } from './app.component';
 // Material imports
 import { ToolbarComponent } from './toolbar/toolbar.component'; // https://material.angular.io/components/toolbar/api
 
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { CarComponent } from './car/car.component';
+import { CustomMaterialModule } from './custom-material/custom-material.module';
 
 @NgModule({
   declarations: [AppComponent, ToolbarComponent, CarComponent],
@@ -17,10 +17,9 @@ import { CarComponent } from './car/car.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
+    CustomMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [MatToolbarModule],
 })
 export class AppModule {}
