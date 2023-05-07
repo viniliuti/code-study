@@ -20,6 +20,6 @@ import { CustomMaterialModule } from './custom-material/custom-material.module';
     CustomMaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent, ToolbarComponent],
 })
 export class AppModule {}
