@@ -1,16 +1,3 @@
-.toolbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  background-color: #1976d2;
-  color: white;
-  font-weight: 600;
-}
-
 .spacer {
   flex: 1;
 }
@@ -23,5 +10,11 @@
 }
 
 .sidenav-container {
-  overflow: auto;
+  overflow: hidden;
+  height: calc(100% - 65px);
+  display: flex;
+}
+
+.mat-sidenav-content {
+  height: 99%;
 }

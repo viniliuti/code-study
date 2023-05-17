@@ -12,18 +12,15 @@
       <mat-icon>settings</mat-icon>
     </button>
   </mat-toolbar>
-  <mat-sidenav-container
-    class="sidenav-container"
-    style="height: 100%; display: flex"
-  >
+  <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #sidenav opened="true" mode="side" style="min-width: 10%">
       <button mat-button>
         <mat-icon>directions_car</mat-icon>
         <span>Car</span>
       </button>
     </mat-sidenav>
-    <mat-sidenav-content style="overflow-y: hidden; height: 100%">
-      <div class="content" style="height: fit-content">
+    <mat-sidenav-content>
+      <div class="content">
         <app-car></app-car>
       </div>
       <router-outlet></router-outlet>
