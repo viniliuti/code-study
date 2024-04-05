@@ -1,0 +1,37 @@
+name: Build DotnetAngular2 projects
+
+on:
+  push:
+    branches: 
+      - main
+    paths:
+      - 'dotnet/dotnetAngular2'
+      - '.github/workflows/dotnetAngular-build.yml'
+
+
+jobs:
+  build:
+  runs-on: ubuntu-latest
+  steps:
+    - checkout:
+      uses: actions/checkout@v4
+
+    - setup node:
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - setup dotnet:
+      uses: actions/setup-dotnet@v4
+      with: 
+        dotnet-version: '8'
+
+    - build angular:
+      run: |
+        cd dotnet/dotnetAngular2/front
+        npm run build
+
+    - build backend:
+      run: |
+        cd dotnet/dotnetAngular2/backend
+        dotnet build
