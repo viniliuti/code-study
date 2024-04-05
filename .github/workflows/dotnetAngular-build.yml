@@ -29,6 +29,7 @@ jobs:
         - name: build angular
           run: |
             cd dotnet/dotnetAngular2/front
+            npm install
             npm run build
 
         - name: build backend
