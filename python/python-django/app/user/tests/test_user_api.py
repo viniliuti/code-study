@@ -56,7 +56,7 @@ class PublicUserApiTest(TestCase):
         """Test an error is returned if password is less than 5 characters"""
         payload = {
             "email": "test@example.com",
-            "password": "testpass123",
+            "password": "ts",
             "name": "Test Name",
         }
 
