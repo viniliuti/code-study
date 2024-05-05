@@ -10,7 +10,7 @@ from rest_framework.permissions import IsAuthenticated
 class RecipeViewSet(viewsets.ModelViewSet):
     """View for manage recipe APIs"""
 
-    serializer_class = serializers.RecipeSerializer
+    serializer_class = serializers.RecipeDetailSerializer
     queryset = Recipe.objects.all()
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
@@ -29,3 +29,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
             )  # do not return RecipeSerializer(), it wants reference of a class
 
         return self.serializer_class
+
+    def perform_create(self, serializer):
+        """Create a new recipe"""  # overrides Django
+        serializer.save(user=self.request.user)
