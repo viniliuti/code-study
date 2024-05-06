@@ -62,6 +62,7 @@ class RecipeSerializer(serializers.ModelSerializer):
                 user=self._get_context_user(),
                 **ingredient,
             )
+
             recipe.ingredients.add(ingredient_obj)
 
     def create(self, validated_data):
