@@ -5,7 +5,7 @@ on:
     branches: 
       - main
     paths:
-      - 'dotnet/dotnetAngular2/*'
+      - 'dotnet/dotnetAngular2/**'
       - '.github/workflows/dotnetAngular-build.yml'
 
 
