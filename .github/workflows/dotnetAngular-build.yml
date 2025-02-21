@@ -19,12 +19,12 @@ jobs:
         - name: setup node
           uses: actions/setup-node@v4
           with:
-            node-version: '20'
+            node-version: '22'
 
         - name: setup dotnet
           uses: actions/setup-dotnet@v4
           with: 
-            dotnet-version: '8'
+            dotnet-version: '9'
 
         - name: build angular
           run: |
